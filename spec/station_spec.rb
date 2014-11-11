@@ -18,15 +18,15 @@ describe Station do
 		expect{station.let_out(passenger)}.to change{station.passenger_count}.by -1
 	end
 
-	# it 'should only let a passenger in if they have enough credit' do
-		# allow(passenger).to receive(:balance).and_return 1
-		# expect{sation.let_in(passenger)}.to raise_error(RuntimeError)
-	# end
+	it 'should only let a passenger in if they have enough credit' do
+		allow(passenger).to receive(:balance).and_return 1
+		expect{station.let_in(passenger)}.to raise_error "Top Up"
+	end
 
-	# it 'should deduct 2.00 from the passenger balance' do
-	# 	expect(passenger).to receive(:deduct).with(2)
-	# 	station.let_in(passenger)
-	# end
+	it 'should deduct 2.00 from the passenger balance' do
+		expect(passenger).to receive(:deduct).with(2)
+		station.let_in(passenger)
+	end
 
 	it 'should accept a train' do
 		expect{station.accept_train(train)}.to change{station.train_count}.by 1

@@ -4,8 +4,7 @@ require 'passenger_holder'
 describe Carriage do
 	
 	let(:carriage) {Carriage.new}
-	let(:passenger) {double :passenger}
-	let(:passenger) {double :passenger}
+	let(:passenger) {double :passenger, balance: 10}
 
 	it 'has a default capacity of 40' do
 		expect(carriage.capacity).to eq 40

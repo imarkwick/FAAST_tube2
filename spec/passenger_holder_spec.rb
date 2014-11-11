@@ -5,8 +5,8 @@ class Holder; include PassengerHolder; end
 describe 'PassengerHolder' do
 	
 	let(:holder) {Holder.new}
-	let(:passenger1) {double :passenger}
-	let(:passenger2) {double :passenger}
+	let(:passenger1) {double :passenger, balance: 10}
+	let(:passenger2) {double :passenger, balance: 10}
 
 	it 'should let a passenger enter' do
 		expect{holder.let_in(passenger1)}.to change{holder.passenger_count}.by 1

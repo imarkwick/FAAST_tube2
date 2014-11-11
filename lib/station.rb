@@ -15,6 +15,11 @@ class Station
 		@trains = []
 	end
 
+	def let_in(passenger)
+		super
+		passenger.deduct(2)
+	end
+
 	def accept_train(train)
 		@trains << train
 	end
