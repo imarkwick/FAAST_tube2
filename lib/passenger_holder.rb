@@ -12,6 +12,7 @@ module PassengerHolder
 	end
 
 	def let_in(passenger)
+		# raise 'Top Up' if passenger.balance < 2
 		raise 'This carriage is full' if full?
 		passengers << passenger
 	end

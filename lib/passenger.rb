@@ -1,3 +1,5 @@
+require_relative 'station'
+
 class Passenger
 
 	DEFAULT_BALANCE = 2.50
