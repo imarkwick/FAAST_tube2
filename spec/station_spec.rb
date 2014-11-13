@@ -5,8 +5,7 @@ require 'passenger'
 describe Station do 
 
 	let(:station) {Station.new}
-	let(:passenger) {double :passenger, balance: 8, deduct: 0}
-	let(:passengerX) {double :passenger, balance: 1.00}
+	let(:passenger) {double :passenger, balance: 8, deduct: 2}
 	let(:train) {double :train}
 
 	it 'should let in a passenger' do

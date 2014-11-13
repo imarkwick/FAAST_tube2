@@ -13,4 +13,8 @@ class Carriage
 		@passengers = []
 	end
 
+	# def let_in(passenger)
+	# 	station.let_out(passenger)
+	# 	super
+	# end
 end
