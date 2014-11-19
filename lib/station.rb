@@ -32,3 +32,8 @@ class Station
 		@trains.count
 	end
 end
+
+# questions from playing in irb.....
+# (1) station.capacity is returning 40 instead of 100
+# (2) when the station accepts 2 trains, the train count is 2, but when it releases 1, the train count goes to 0
+# (3) still to do - make station let out passenger as carriage let's in passenger
