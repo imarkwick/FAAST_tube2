@@ -7,6 +7,7 @@ class Passenger
 
 	def initialize(options = {})
 		@balance = options.fetch(:balance, DEFAULT_BALANCE)
+		@in_station = false
 	end
 
 	def deduct(amount)
@@ -16,5 +17,4 @@ class Passenger
 	def top_up(amount)
 		@balance += amount
 	end
-
 end

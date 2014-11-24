@@ -4,7 +4,7 @@ class Carriage
 
 	include PassengerHolder
 
-	attr_accessor :passengers
+	attr_reader :passengers
 
 	DEFAULT_CAPACITY = 40
 
@@ -12,9 +12,4 @@ class Carriage
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
 		@passengers = []
 	end
-
-	# def let_in(passenger)
-	# 	station.let_out(passenger)
-	# 	super
-	# end
 end

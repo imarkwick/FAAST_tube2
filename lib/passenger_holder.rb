@@ -22,7 +22,7 @@ module PassengerHolder
 	end
 
 	def full?
-		passenger_count == 40
+		passenger_count == DEFAULT_CAPACITY
 	end
 
 	def capacity

@@ -4,8 +4,7 @@ class Station
 
 	include PassengerHolder
 
-	attr_reader :train
-	attr_reader :passengers
+	attr_reader :passengers, :trains
 
 	DEFAULT_CAPACITY = 100
 
@@ -31,9 +30,11 @@ class Station
 	def train_count
 		@trains.count
 	end
-end
 
-# questions from playing in irb.....
-# (1) station.capacity is returning 40 instead of 100
-# (2) when the station accepts 2 trains, the train count is 2, but when it releases 1, the train count goes to 0
-# (3) still to do - make station let out passenger as carriage let's in passenger
+	def passenger_board(carriage)
+		passengers.each do |passenger|
+			carriage.let_in(passenger)
+			passengers.delete(passenger)
+		end
+	end
+end

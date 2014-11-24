@@ -8,6 +8,7 @@ describe Passenger do
 		passenger1.deduct(2)
 		expect(passenger1.balance).to eq (0.5)
 	end
+
 	it 'can top up' do
 		passenger1.deduct(2)
 		expect(passenger1.balance).to eq (0.5)

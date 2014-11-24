@@ -1,5 +1,4 @@
 require 'train'
-require 'passenger_holder'
 
 describe Train do
 	
@@ -15,10 +14,10 @@ describe Train do
 		expect(train.carriage_count).to eq 3
 	end
 
-	# it 'can release a carriage' do
-		# train.add_carriage(carriage)
-		# expect(train.carriage_count).to eq 3
-		# train.release_carriage(carriage)
-		# expect(train.carriage_count).to eq 1
-	# end
+	it 'can release a carriage' do
+		train.add_carriage(carriage)
+		expect(train.carriage_count).to eq 3
+		train.release_carriage(carriage)
+		expect(train.carriage_count).to eq 2
+	end
 end

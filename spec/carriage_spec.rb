@@ -1,11 +1,10 @@
 require 'carriage'
-require 'passenger_holder'
 
 describe Carriage do
 	
 	let(:carriage) { Carriage.new }
 	let(:passenger) { double :passenger, balance: 10 }
-	let(:station) { double :station }
+	let(:station) { double :station, let_in: passenger, passenger_count: 1 }
 
 	it 'has a default capacity of 40' do
 		expect(carriage.capacity).to eq 40
@@ -30,9 +29,4 @@ describe Carriage do
 		40.times {carriage.let_in(passenger)}
 		expect{carriage.let_in(passenger)}.to raise_error(RuntimeError)
 	end 
-
-	# it 'removes a passenger from station when let in' do
-	# 	station.let_in(passenger)
-	# 	expect{carriage.let_in(passenger)}.to change{station.passenger_count}.by -1
-	# end
 end
