@@ -10,3 +10,9 @@ This challenge was set by Makers Academy, to crete a transport softward sevelopm
 * A Passenger will touch in at the station and touch out at the destination station.
 * Each coach of a train can hold up to 40 passengers.
 * Each train is made of a number of coaches.
+
+To see tests, clone the repository and run rspec;
+
+```sh
+$ rspec
+```
