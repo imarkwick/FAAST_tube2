@@ -1,18 +1,25 @@
-## FAAST tube system
+# FAAST tube system
 
 This challenge was set by Makers Academy, to crete a transport softward sevelopment and deployment specification for a new FAAST Tube system (Fast and Accessible Super Tube)
 
-# The FAAST system will cater for the following:
+## The objective:
 
-* There will be a number of trains inside the system.
-* Trains will travel from station to station.
-* Inside of a station, when the train stops, passengers will alight and enter the carriages of the train.
-* A Passenger will touch in at the station and touch out at the destination station.
-* Each coach of a train can hold up to 40 passengers.
-* Each train is made of a number of coaches.
+* Number of trains inside the system.
+* Trains travel from station to station.
+* Passengers alight and enter the train from the station.
+* Passengers touch in at the station and out at their destination station.
+* Each carriage can hold up to 40 passengers.
+* Each train is made of a number of carriages.
 
-To see tests, clone the repository and run rspec;
+## Technologies used
+
+* Ruby
+* RSpec testing
+
+## How to run it
 
 ```sh
+$ git clone https://github.com/imarkwick/FAAST_tube2.git
+$ cd FAAST_tube2
 $ rspec
 ```
